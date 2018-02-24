@@ -9,7 +9,7 @@ const Projects = () => (
     {projects.map((project, key) => (
       <div
         className={`projects-section-item col-6_sm-12 ${project.className}`}
-        key={key}
+        key={`${project.className}${key}`} // eslint-disable-line
       >
         <h3>{project.title}</h3>
         <img
