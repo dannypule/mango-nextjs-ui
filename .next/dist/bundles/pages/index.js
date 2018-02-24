@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,14 +82,16 @@ module.exports = require("react");
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(7);
+module.exports = __webpack_require__(9);
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -450,7 +452,7 @@ var Home_Home = function Home() {
 
 /* harmony default export */ var components_Home_Home = (Home_Home);
 // EXTERNAL MODULE: ./styles/styles.scss
-var styles = __webpack_require__(8);
+var styles = __webpack_require__(10);
 var styles_default = /*#__PURE__*/__webpack_require__.n(styles);
 
 // CONCATENATED MODULE: ./pages/index.jsx
@@ -463,7 +465,7 @@ var styles_default = /*#__PURE__*/__webpack_require__.n(styles);
 });
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports) {
 
 

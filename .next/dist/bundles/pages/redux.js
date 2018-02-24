@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -85,14 +85,16 @@ module.exports = require("react");
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
+/* 9 */,
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
+module.exports = __webpack_require__(12);
 
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,19 +105,19 @@ var external__react_ = __webpack_require__(0);
 var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
 
 // EXTERNAL MODULE: external "next-redux-wrapper"
-var external__next_redux_wrapper_ = __webpack_require__(11);
+var external__next_redux_wrapper_ = __webpack_require__(13);
 var external__next_redux_wrapper__default = /*#__PURE__*/__webpack_require__.n(external__next_redux_wrapper_);
 
 // EXTERNAL MODULE: external "redux"
-var external__redux_ = __webpack_require__(12);
+var external__redux_ = __webpack_require__(14);
 var external__redux__default = /*#__PURE__*/__webpack_require__.n(external__redux_);
 
 // EXTERNAL MODULE: external "redux-devtools-extension"
-var external__redux_devtools_extension_ = __webpack_require__(13);
+var external__redux_devtools_extension_ = __webpack_require__(15);
 var external__redux_devtools_extension__default = /*#__PURE__*/__webpack_require__.n(external__redux_devtools_extension_);
 
 // EXTERNAL MODULE: external "redux-thunk"
-var external__redux_thunk_ = __webpack_require__(14);
+var external__redux_thunk_ = __webpack_require__(16);
 var external__redux_thunk__default = /*#__PURE__*/__webpack_require__.n(external__redux_thunk_);
 
 // CONCATENATED MODULE: ./store/store.js
@@ -244,25 +246,25 @@ redux_Page.getInitialProps = function (_ref2) {
 })(redux_Page));
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("next-redux-wrapper");
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-devtools-extension");
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");

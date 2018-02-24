@@ -1,10 +1,25 @@
 {
+  "root": true,
   "parser": "babel-eslint",
   "extends": "airbnb",
+  "plugins": ["babel"],
   "globals": {
     "document": true,
     "window": true,
     "process": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "paths": ["."]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "import/extensions": 0,
