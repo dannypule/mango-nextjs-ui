@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
-const path = require('path')
+const path = require('path') // eslint-disable-line no-unused-vars
 
 const dev = process.env.NODE_ENV !== 'production'
 const next = require('next')
@@ -9,7 +9,7 @@ const pathMatch = require('path-match')
 const port = parseInt(process.env.PORT, 10) || 4300
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const { parse } = require('url')
+const { parse } = require('url') // eslint-disable-line no-unused-vars
 
 const apiRoutes = require('./server/routes/apiRoutes.js')
 
@@ -30,7 +30,7 @@ app.prepare().then(() => {
   server.use('/api', apiRoutes)
 
   // Server-side
-  const route = pathMatch()
+  const route = pathMatch() // eslint-disable-line no-unused-vars
 
   server.get('*', (req, res) => {
     return handle(req, res)

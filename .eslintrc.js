@@ -55,6 +55,8 @@ module.exports = {
     'react/require-default-props': 0,
     'react/sort-comp': 0,
     'jsx-a11y/html-has-lang': 0, // override for html element in _document.jsx
-    'import/newline-after-import': 0
+    'import/newline-after-import': 0,
+    'function-paren-newline': 0,
+    'arrow-parens': 0
   }
 }
