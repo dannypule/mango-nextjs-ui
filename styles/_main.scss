@@ -1,0 +1,20 @@
+* {
+  font-family: 'Arvo', serif;
+}
+
+body {
+  margin: 0;
+  animation: fadein 2s;
+}
+.bold-text {
+  font-weight: 600;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
