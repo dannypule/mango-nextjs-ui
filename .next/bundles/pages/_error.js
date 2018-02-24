@@ -1,1 +1,0 @@
-module.exports=__NEXT_REGISTER_PAGE("/_error",function(){var e=webpackJsonp([4],{185:function(e,r,t){e.exports=t(186)},186:function(e,r,t){"use strict";Object.defineProperty(r,"__esModule",{value:true});var n=t(1);var u=t.n(n);r["default"]=function(){return u.a.createElement("div",{className:""},"An error occurred.")}}},[185]);return{page:e.default}});

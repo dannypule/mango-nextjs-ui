@@ -1,1 +1,1 @@
-export default () => <div className="">An error occurred.</div>
+export default () => <div className="example-class">An error occurred.</div>
