@@ -1,525 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
-<div
-  className="Home"
->
-  <div>
-    <div
-      className="bio"
-    >
-      <img
-        alt="Danny Pule - Javascript Engineer"
-        src="/static/images/danny_pule.jpg"
-      />
-      <h2>
-        <span>
-          Danny Pule
-        </span>
-      </h2>
-      <h5>
-        Javascript Engineer based in South West London, UK
-      </h5>
-    </div>
-    <div
-      className="site-section how-i-do"
-    >
-      <div
-        className="section-inner"
-      >
-        <h1>
-          ~ About ~
-        </h1>
-        <p>
-          When I'm not building something or learning about some new Web technology you can find me scrolling through Dribbble.com appreciating the designs contained therein.
-        </p>
-      </div>
-    </div>
-    <div
-      className="site-section skillz"
-    >
-      <div
-        className="section-inner"
-      >
-        <div>
-          <h1>
-            ~ Frontend Skills ~
-          </h1>
-          <p>
-            React, Redux, Webpack,
-          </p>
-          <p>
-            HTML, CSS,
-          </p>
-          <p>
-            Angular 2+, Typescript,
-          </p>
-          <p>
-            Rx/JS, Modern Javascript
-          </p>
-          <br />
-          <h1>
-            ~ Backend Skills ~
-          </h1>
-          <p>
-            Node.js, Postgres,
-          </p>
-          <p>
-            Heroku, Docker
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="projects-section grid"
-  >
-    <div
-      className="col-12"
-    >
-      <h1>
-        ~ Projects ~
-      </h1>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 arc-image"
-    >
-      <h3>
-        Website for Arcadia's Fashion Brands (2017 & 2018)
-      </h3>
-      <img
-        alt="Website for Arcadia's Fashion Brands (2017 & 2018)"
-        className=""
-        src="/static/images/arcadia.gif"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          Online fashion store.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          This project touches on various aspects of the user journey
-    from product listing views to checkout. I'm a member of a cross-functional team which includes Javascript Engineers, UX
-    Designers, Quality Assurance, Business Analysts & Product Owners. 
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          React, Redux, Jest Testing, Git, Agile, HTML, CSS
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Data Visualisation Interface (2017)
-      </h3>
-      <img
-        alt="Data Visualisation Interface (2017)"
-        className=""
-        src="/static/images/ri-client-dashboard.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A user interface for RI's Data Science team's analysis of client's retail data.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          I was involved from the early planning phases of this project and advised on the approach we would take for the UI.
-    I was the sole Javascript developer on this 6-month long project. Our received some initial wireframes for the UI and I took them
-    to the next level by implementing a glossy interface using Material Design.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          Angular 4, Redux, Typescript, Node.js, Webpack, Git, Material Design, UX, Agile
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Analytics Dashboards (2016 & 2017)
-      </h3>
-      <img
-        alt="Analytics Dashboards (2016 & 2017)"
-        className=""
-        src="/static/images/osca.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A minimum viable product used to market RI's retail analytics programmes to new clients.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          I lead the JavaScript aspects of the project. Working with the UX Designer/Developer to enhance the UX and
-    design of the application. Working with product owners in an agile environment to develop new features. The outcome
-    of the project was that RI was able to secure a multi-million pound contract with a large retailer.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          Angular 1.x, Javascript, Node.js, Gulp, Git, Material Design, UX, Agile
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Appsme App Builder (2016)
-      </h3>
-      <img
-        alt="Appsme App Builder (2016)"
-        className=""
-        src="/static/images/screen_appsme.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A wix.com-like app builder which allows small business owners to create an iOS and Android app for their
-    business. The online app builder made heavy use of Javascript.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          Adding new functionality and improving performance of Appsme's mobile app builder.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          Javascript, Git, HTML, CSS, Less
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Appsme Landing Page (2016)
-      </h3>
-      <img
-        alt="Appsme Landing Page (2016)"
-        className=""
-        src="/static/images/appsme_getstarted.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A landing page for Appsme marketing campaigns.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          Design, sourcing and processing images, layout of page elements, optimizing for various screen sizes.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          Javascript, Git, HTML, CSS, Less
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Kiqlan Mobile App v2 (2015)
-      </h3>
-      <img
-        alt="Kiqlan Mobile App v2 (2015)"
-        className="max-width"
-        src="/static/images/screen-kiqplan-app.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A personal training app which is part of Kin Wellness's (formerly Fitbug) corporate wellness program.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          Pixel perfect CSS to match the look and feel of the design briefs.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          HTML, CSS, Sass, Git
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Kiqlan Website (2015)
-      </h3>
-      <img
-        alt="Kiqlan Website (2015)"
-        className=""
-        src="/static/images/screen-kiqplan.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A sales and user registration website for users of Kiqplan mobile app.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          SEO optimization, improving layout of existing pages, enhancing registration
-    functionality, creating new backend tools for user management and bug fixing.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          Javascript, JQuery, PHP, AJAX, Git, HTML, CSS, Sass
-        </p>
-      </div>
-    </div>
-    <div
-      className="projects-section-item col-6_sm-12 undefined"
-    >
-      <h3>
-        Kiqplan Support Center (2014)
-      </h3>
-      <img
-        alt="Kiqplan Support Center (2014)"
-        className=""
-        src="/static/images/screen-kiqplan-support.png"
-      />
-      <div
-        className="projects-section-item-inner"
-      >
-        <h5>
-          A ticketing and help centre for Kiqplan users.
-        </h5>
-        <p
-          className="project-overview"
-        >
-          I heavily customized a very basic theme which only looked good on desktops and made it mobile ready.
-    The look and feel of the site was also given an overhaul to bring it more in line with the Kiqplan branding.
-        </p>
-        <p
-          className="skills-used"
-        >
-          <span
-            className="bold-text"
-          >
-            Skills used:
-          </span>
-           
-          Javascript, HTML, CSS
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="codepens-section"
-  >
-    <div
-      className="codepens-header"
-    >
-      <h1>
-        ~ Codepens ~
-      </h1>
-    </div>
-    <div
-      className="codepen-item"
-    >
-      <div
-        className="codepen-item-header"
-      >
-        <h2>
-          Magical Elixir
-        </h2>
-        <h5>
-          CSS
-        </h5>
-      </div>
-      <div
-        className="codepen-item-body"
-      >
-        <iframe
-          allowFullScreen="true"
-          frameBorder="no"
-          height="800"
-          scrolling="no"
-          src="//codepen.io/danny_pule/embed/vywaZw/?height=800&theme-id=14066&default-tab=result&embed-version=2"
-          title="Magical Elixir"
-        />
-      </div>
-    </div>
-    <div
-      className="codepen-item"
-    >
-      <div
-        className="codepen-item-header"
-      >
-        <h2>
-          Old Master
-        </h2>
-        <h5>
-          CSS
-        </h5>
-      </div>
-      <div
-        className="codepen-item-body"
-      >
-        <iframe
-          allowFullScreen="true"
-          frameBorder="no"
-          height="800"
-          scrolling="no"
-          src="//codepen.io/danny_pule/embed/RWbYMq/?height=800&theme-id=14066&default-tab=result&embed-version=2"
-          title="Old Master"
-        />
-      </div>
-    </div>
-    <div
-      className="codepen-item"
-    >
-      <div
-        className="codepen-item-header"
-      >
-        <h2>
-          Virtual Vault
-        </h2>
-        <h5>
-          React, CSS
-        </h5>
-      </div>
-      <div
-        className="codepen-item-body"
-      >
-        <iframe
-          allowFullScreen="true"
-          frameBorder="no"
-          height="800"
-          scrolling="no"
-          src="//codepen.io/danny_pule/embed/zKYbmP/?height=800&theme-id=14066&default-tab=result&embed-version=2"
-          title="Virtual Vault"
-        />
-      </div>
-    </div>
-    <div
-      className="codepen-item"
-    >
-      <div
-        className="codepen-item-header"
-      >
-        <h2>
-          Micro Control Unit
-        </h2>
-        <h5>
-          CSS
-        </h5>
-      </div>
-      <div
-        className="codepen-item-body"
-      >
-        <iframe
-          allowFullScreen="true"
-          frameBorder="no"
-          height="800"
-          scrolling="no"
-          src="//codepen.io/danny_pule/embed/Kgqbgp/?height=800&theme-id=14066&default-tab=result&embed-version=2"
-          title="Micro Control Unit"
-        />
-      </div>
-    </div>
-    <div
-      className="codepen-item"
-    >
-      <div
-        className="codepen-item-header"
-      >
-        <h2>
-          Menu animation
-        </h2>
-        <h5>
-          CSS
-        </h5>
-      </div>
-      <div
-        className="codepen-item-body"
-      >
-        <iframe
-          allowFullScreen="true"
-          frameBorder="no"
-          height="800"
-          scrolling="no"
-          src="//codepen.io/danny_pule/embed/pEjEOR/?height=800&theme-id=14066&default-tab=result&embed-version=2"
-          title="Menu animation"
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="credits-section"
-  >
-    <span />
-    <span>
-      ©️ 
-      2018
-    </span>
-  </div>
-</div>
+exports[`Main @render renders in default state 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WrappedCmp
+    getScatterData={[Function]}
+    scatterData={
+      Array [
+        Object {
+          "x": 30,
+          "y": 20,
+        },
+        Object {
+          "x": 50,
+          "y": 70,
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Connect(Component)
+        getScatterData={[Function]}
+        scatterData={
+          Array [
+            Object {
+              "x": 30,
+              "y": 20,
+            },
+            Object {
+              "x": 50,
+              "y": 70,
+            },
+          ]
+        }
+      />,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "getScatterData": [Function],
+        "scatterData": Array [
+          Object {
+            "x": 30,
+            "y": 20,
+          },
+          Object {
+            "x": 50,
+            "y": 70,
+          },
+        ],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Connect(Component)
+          getScatterData={[Function]}
+          scatterData={
+            Array [
+              Object {
+                "x": 30,
+                "y": 20,
+              },
+              Object {
+                "x": 50,
+                "y": 70,
+              },
+            ]
+          }
+        />,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "getScatterData": [Function],
+          "scatterData": Array [
+            Object {
+              "x": 30,
+              "y": 20,
+            },
+            Object {
+              "x": 50,
+              "y": 70,
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;

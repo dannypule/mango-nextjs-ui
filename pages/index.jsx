@@ -1,4 +1,6 @@
-import Home from '../components/Home/Home.jsx'
+import Chart from '../components/Chart'
+import withRedux from 'next-redux-wrapper'
+import store from '../store/store'
 import '../styles/styles.scss'
 
-export default () => <Home />
+export default withRedux(store)(() => <Chart />)
