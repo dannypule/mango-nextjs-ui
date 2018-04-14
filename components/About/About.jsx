@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
 import Proptypes from 'prop-types'
-import Numbers from './Numbers'
+import Numbers from '../Numbers/Numbers'
 
 class About extends Component {
   static propTypes = {

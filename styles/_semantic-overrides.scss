@@ -1,3 +1,12 @@
+body {
+  font-family: 'Dosis', sans-serif;
+  overflow: hidden;
+}
+button {
+  font-family: 'Dosis', sans-serif !important;
+}
+
+// primary button
 .ui.primary.button,
 .ui.primary.buttons .button {
   background-color: $primary;
@@ -16,4 +25,25 @@
 .ui.primary.button:hover,
 .ui.primary.buttons .button:hover {
   background-color: lighten($color: $primary, $amount: 10);
+}
+
+// secondary button
+.ui.secondary.button,
+.ui.secondary.buttons .button {
+  background-color: $secondary;
+}
+
+.ui.secondary.button:active,
+.ui.secondary.buttons .button:active {
+  background-color: lighten($color: $secondary, $amount: 10);
+}
+
+.ui.secondary.button:focus,
+.ui.secondary.buttons .button:focus {
+  background-color: lighten($color: $secondary, $amount: 10);
+}
+
+.ui.secondary.button:hover,
+.ui.secondary.buttons .button:hover {
+  background-color: lighten($color: $secondary, $amount: 10);
 }

@@ -18,6 +18,10 @@ export default class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css"
           /> */}
           <link
+            href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700"
+            rel="stylesheet"
+          />
+          <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
           />

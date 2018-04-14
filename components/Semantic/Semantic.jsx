@@ -15,7 +15,6 @@ import {
   Image,
   Modal,
   Header,
-  Container,
 } from 'semantic-ui-react'
 import { ToastContainer, toast } from 'react-toastify'
 import DatePicker from 'react-datepicker'
@@ -42,7 +41,7 @@ const stateOptions = [
 ]
 
 const Semantic = () => (
-  <Container>
+  <div>
     <br />
     <br />
     <br />
@@ -129,7 +128,7 @@ const Semantic = () => (
     <br />
     <br />
     <br />
-  </Container>
+  </div>
 )
 
 class ConfirmExampleConfirm extends React.Component {

@@ -12,8 +12,8 @@ import {
   YAxis,
 } from 'recharts'
 
-import Numbers from './Numbers'
-import { getScatterData } from '../store/actions/chartActions'
+import Numbers from '../Numbers/Numbers'
+import { getScatterData } from '../../store/actions/chartActions'
 
 class Chart extends Component {
   static propTypes = {

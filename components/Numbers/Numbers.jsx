@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Proptypes from 'prop-types'
-import { increaseNumber, decreaseNumber } from '../store/actions/numberActions'
+import {
+  increaseNumber,
+  decreaseNumber,
+} from '../../store/actions/numberActions'
 
-export class Numbers extends Component {
+class Numbers extends Component {
   static propTypes = {
     increaseNumber: Proptypes.func,
     decreaseNumber: Proptypes.func,

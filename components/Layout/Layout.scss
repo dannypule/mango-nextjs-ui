@@ -1,0 +1,15 @@
+.Layout {
+  .layout-body {
+    left: 0;
+    height: calc(100vh - 60px);
+    overflow: auto;
+    margin-left: 200px;
+    margin-top: 60px;
+    top: 60px;
+    position: absolute;
+    width: calc(100% - 200px);
+    overflow-x: hidden;
+    padding: 0 10px;
+    background-color: $grey4;
+  }
+}
