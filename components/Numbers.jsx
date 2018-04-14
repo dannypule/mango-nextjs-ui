@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Proptypes from 'prop-types'
 import { increaseNumber, decreaseNumber } from '../store/actions/numberActions'
 
-class Chart extends Component {
+export class Numbers extends Component {
   static propTypes = {
     increaseNumber: Proptypes.func,
     decreaseNumber: Proptypes.func,
@@ -36,4 +36,4 @@ export default connect(
     increaseNumber,
     decreaseNumber,
   },
-)(Chart)
+)(Numbers)
