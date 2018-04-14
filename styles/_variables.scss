@@ -9,7 +9,8 @@ $orange60: #ffab2e; // orange primary
 $grey4: #f5f6fa; // background or side panel
 $grey10: #e5e6eb; // borders
 $grey20: #e1e4eb; // grey connecting lines, scrollbars
-$grey30: #cfcfd4; // icons
+$grey30: #c6cdd7; // icons
+$grey50: #9198a2; // font lighter lighter
 $grey60: #596072; // font lighter
 $grey70: #4b5165; // font
 
@@ -19,5 +20,9 @@ $primary: $blue40;
 $primaryDark1: $blue60;
 $secondary: $orange40;
 
-$border: $grey10;
-$font: $grey70;
+$borderColor: $grey10;
+$iconColor: $grey30;
+$fontColor1: $grey60;
+$fontColor2: $grey50;
+
+$borderRadius: 3px !important;

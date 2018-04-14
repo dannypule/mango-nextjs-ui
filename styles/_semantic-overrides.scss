@@ -2,6 +2,9 @@ body {
   font-family: 'Dosis', sans-serif;
   overflow: hidden;
 }
+body ::-webkit-scrollbar {
+  width: 6px;
+}
 button {
   font-family: 'Dosis', sans-serif !important;
 }
@@ -46,4 +49,24 @@ button {
 .ui.secondary.button:hover,
 .ui.secondary.buttons .button:hover {
   background-color: lighten($color: $secondary, $amount: 10);
+}
+
+.ui.dropdown {
+  user-select: none;
+}
+
+.ui.dropdown .menu {
+  border-radius: $borderRadius;
+  box-shadow: none !important;
+}
+
+.ui.dropdown .menu > .item {
+  font-size: 14px;
+  font-weight: 500;
+  color: $fontColor2;
+}
+
+.ui.dropdown .menu > .item:hover {
+  background-color: $grey4;
+  color: $fontColor1;
 }

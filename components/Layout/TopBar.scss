@@ -1,0 +1,44 @@
+.TopBar {
+  height: 60px;
+  border-bottom: 1px solid $borderColor;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 999;
+  .gym-name {
+    color: $fontColor1;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 18px;
+  }
+  .user-dropdown {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    padding: 0 16px;
+    border-left: 1px solid $borderColor;
+    .dropdown {
+      > .text {
+        margin: 0 22px 0 6px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $fontColor2;
+      }
+      > i.icon {
+        color: $iconColor;
+      }
+      > .menu {
+        right: 0;
+        top: 125%;
+      }
+    }
+  }
+}
