@@ -1,0 +1,59 @@
+.SideMenu {
+  position: fixed;
+  height: calc(100vh - 60px);
+  width: 148px;
+  top: 60px;
+  border-right: 1px solid $borderColor;
+  @media (max-width: $sm) {
+    display: none;
+  }
+  .menu-items {
+    padding: 50px 25px 0;
+    .list {
+      .item {
+        padding: 13px 0;
+        font-size: 17px;
+        font-weight: 500;
+        color: $fontColor2;
+      }
+    }
+    .accordion {
+      user-select: none;
+      .accordion-item {
+        padding: 9px 0;
+
+        .title {
+          padding-right: 18px;
+          position: relative;
+          color: $fontColor2;
+          &:hover:not(.active) {
+            color: $fontColor1;
+            i.dropdown {
+              color: $fontColor1;
+            }
+          }
+          &.active {
+            color: $primary;
+            i.dropdown {
+              color: $primary;
+            }
+          }
+          i.dropdown {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            color: $grey30;
+          }
+        }
+        .content {
+          background-color: #f5f6fa;
+          padding: 4px 8px !important;
+          border-radius: 2px;
+          color: $fontColor2;
+        }
+      }
+    }
+  }
+}
