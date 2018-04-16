@@ -1,4 +1,4 @@
-# Scatter Plot
+# React Next.js Starter Project
 
 ## Prerequisites
 
