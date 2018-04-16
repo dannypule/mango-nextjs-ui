@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Dropdown, Image, Modal } from 'semantic-ui-react'
+import LoginForm from '../Login/LoginForm'
 // import Link from 'next/link'
 
 // import { connect } from 'react-redux'
@@ -44,11 +45,13 @@ class TopBar extends Component {
               src="https://api.adorable.io/avatars/45/abott@adorable.pngCopy"
               avatar
             />
-            <Dropdown inline text="Fenton Barley">
+            <Dropdown inline text="Fenton Bentley">
               <Dropdown.Menu>
                 <Dropdown.Item>
                   <Modal trigger={<span>Login</span>}>
-                    <Modal.Content>Login</Modal.Content>
+                    <Modal.Content>
+                      <LoginForm />
+                    </Modal.Content>
                   </Modal>
                 </Dropdown.Item>
                 <Dropdown.Item>
