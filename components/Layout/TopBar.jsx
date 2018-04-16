@@ -59,6 +59,9 @@ class TopBar extends Component {
               </Dropdown.Menu>
             </Dropdown>
           </span>
+          <div className="burger-menu">
+            <i className="material-icons">menu</i>
+          </div>
         </div>
       </header>
     )

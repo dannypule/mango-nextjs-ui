@@ -17,17 +17,17 @@ button {
 
 .ui.primary.button:active,
 .ui.primary.buttons .button:active {
-  background-color: lighten($color: $primary, $amount: 10);
+  background-color: darken($color: $primary, $amount: 7);
 }
 
 .ui.primary.button:focus,
 .ui.primary.buttons .button:focus {
-  background-color: lighten($color: $primary, $amount: 10);
+  background-color: darken($color: $primary, $amount: 7);
 }
 
 .ui.primary.button:hover,
 .ui.primary.buttons .button:hover {
-  background-color: lighten($color: $primary, $amount: 10);
+  background-color: darken($color: $primary, $amount: 7);
 }
 
 // secondary button
@@ -38,17 +38,17 @@ button {
 
 .ui.secondary.button:active,
 .ui.secondary.buttons .button:active {
-  background-color: lighten($color: $secondary, $amount: 10);
+  background-color: darken($color: $secondary, $amount: 7);
 }
 
 .ui.secondary.button:focus,
 .ui.secondary.buttons .button:focus {
-  background-color: lighten($color: $secondary, $amount: 10);
+  background-color: darken($color: $secondary, $amount: 7);
 }
 
 .ui.secondary.button:hover,
 .ui.secondary.buttons .button:hover {
-  background-color: lighten($color: $secondary, $amount: 10);
+  background-color: darken($color: $secondary, $amount: 7);
 }
 
 .ui.dropdown {

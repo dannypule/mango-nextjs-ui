@@ -4,6 +4,9 @@
   width: 148px;
   top: 60px;
   border-right: 1px solid $borderColor;
+  @media (max-width: $sm) {
+    display: none;
+  }
   .menu-items {
     padding: 50px 25px 0;
     .list {

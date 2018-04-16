@@ -96,7 +96,7 @@ class SideMenu extends Component {
       <div className="menu-items">
         <Accordion>
           {menu.map((item, i) => (
-            <div className="accordion-item">
+            <div className="accordion-item" key={item.title}>
               <Accordion.Title
                 active={activeIndex === i}
                 index={i}

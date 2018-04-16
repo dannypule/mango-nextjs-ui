@@ -9,6 +9,9 @@
   left: 0;
   background-color: #ffffff;
   z-index: 999;
+  @media (max-width: $sm) {
+    height: 50px;
+  }
   .gym-name {
     color: $fontColor1;
     font-size: 17px;
@@ -25,6 +28,9 @@
     margin: auto 0;
     padding: 0 16px;
     border-left: 1px solid $borderColor;
+    @media (max-width: $sm) {
+      display: none;
+    }
     .dropdown {
       > .text {
         margin: 0 22px 0 6px;
@@ -39,6 +45,20 @@
         right: 0;
         top: 125%;
       }
+    }
+  }
+  .burger-menu {
+    display: none;
+    position: absolute;
+    right: 18px;
+    height: 24px;
+    width: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    @media (max-width: $sm) {
+      display: block;
     }
   }
 }
