@@ -2,6 +2,26 @@ import React from 'react'
 import { withFormik } from 'formik'
 import isEmail from 'isemail'
 import { Input, Card, Button } from 'semantic-ui-react'
+import yup from 'yup'
+// import { setLocale } from 'yup/lib/customLocale'
+
+// setLocale({
+//   email: {
+//     required: 'Email reqd',
+//   },
+//   password: {
+//     required: 'Password reqd',
+//   },
+// })
+
+const schema = yup.object().shape({
+  email: yup
+    .string()
+    .email('Email is required.')
+    .required('Email is required.'),
+  password: yup.string().required('Password is required.'),
+  name: yup.string().required('Name is required.'),
+})
 
 // Our inner form component which receives our form's state and updater methods as props
 const LoginForm = ({
@@ -90,5 +110,13 @@ export default withFormik({
   ) => {
     console.log(values)
     setSubmitting(false)
+    schema
+      .validate(values)
+      .then(valid => {
+        // console.log(valid)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   },
 })(LoginForm)
