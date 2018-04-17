@@ -5,8 +5,13 @@ body {
 body ::-webkit-scrollbar {
   width: 6px;
 }
-button {
+.ui.button {
   font-family: 'Dosis', sans-serif !important;
+  font-size: 15px;
+  line-height: 36px;
+  padding: 0;
+  font-weight: 500;
+  text-transform: inherit;
 }
 
 // primary button
@@ -69,4 +74,39 @@ button {
 .ui.dropdown .menu > .item:hover {
   background-color: $grey4;
   color: $fontColor1;
+}
+
+.ui.input {
+  height: 36px;
+  border-radius: $borderRadius;
+  input {
+    border: 1px solid $inputBorderColor;
+    &:focus {
+      border-color: $inputBorderFocusColor !important;
+    }
+  }
+  i.material-icons {
+    font-size: 21px;
+  }
+  &.labeled {
+    .label {
+      background-color: $inputBorderColor;
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.ui.card,
+.ui.cards > .card {
+  box-shadow: none;
+  border: 1px solid $borderColor;
+}
+
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
+  color: $fontColor2;
 }

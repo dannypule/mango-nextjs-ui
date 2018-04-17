@@ -5,20 +5,20 @@ module.exports = {
   globals: {
     document: true,
     window: true,
-    process: true
+    process: true,
   },
   settings: {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx'],
-        paths: ['.']
-      }
-    }
+        paths: ['.'],
+      },
+    },
   },
   env: {
     browser: true,
     es6: true,
-    jest: true
+    jest: true,
   },
   rules: {
     'import/extensions': 0,
@@ -56,6 +56,6 @@ module.exports = {
     'jsx-a11y/html-has-lang': 0, // override for html element in _document.jsx
     'import/newline-after-import': 0,
     'function-paren-newline': 0,
-    'arrow-parens': 0
-  }
+    'arrow-parens': 0,
+  },
 }

@@ -1,4 +1,5 @@
 $blue20: #d9e8ff; // highlight background for blue font
+$blue30: #afc1f1; // $inputBorderFocusColor
 $blue40: #4d7cfe; // blue primary - buttons, blue font
 $blue60: #2d69e9; //
 
@@ -7,6 +8,7 @@ $orange40: #ebb86e; // orange font
 $orange60: #ffab2e; // orange primary
 
 $grey4: #f5f6fa; // background or side panel
+$grey6: #ebecf1; // input borders
 $grey10: #e5e6eb; // borders
 $grey20: #e1e4eb; // grey connecting lines, scrollbars
 $grey30: #c6cdd7; // icons
@@ -21,9 +23,11 @@ $primaryDark1: $blue60;
 $secondary: $orange40;
 
 $borderColor: $grey10;
+$inputBorderColor: $grey6;
+$inputBorderFocusColor: #afc1f1;
 $iconColor: $grey30;
 $fontColor1: $grey60;
-$fontColor2: $grey50;
+$fontColor2: $grey50; // used for most fonts
 
 $borderRadius: 3px !important;
 
