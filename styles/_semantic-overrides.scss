@@ -115,6 +115,6 @@ body ::-webkit-scrollbar {
 
 .ui.card > .content,
 .ui.cards > .card > .content {
-  padding: 10px;
+  padding: $padding;
   @include borderRadius;
 }

@@ -1,3 +1,17 @@
 .material-icons {
   color: $grey30;
 }
+
+form {
+  .field {
+    padding: 0 0 $padding;
+    .input {
+      width: 100%;
+    }
+    .field-errors {
+      color: $red21;
+      font-weight: 500;
+      margin: 2px 1px 0;
+    }
+  }
+}

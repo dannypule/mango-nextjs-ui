@@ -8,7 +8,7 @@
     position: absolute;
     width: calc(100% - 148px);
     overflow-x: hidden;
-    padding: 0 10px;
+    padding: 0 $padding;
     background-color: $grey4;
     @media (max-width: $sm) {
       top: 50px;
