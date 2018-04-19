@@ -61,7 +61,7 @@ body ::-webkit-scrollbar {
 }
 
 .ui.dropdown .menu {
-  border-radius: $borderRadius;
+  @include borderRadius;
   box-shadow: none !important;
 }
 
@@ -78,9 +78,11 @@ body ::-webkit-scrollbar {
 
 .ui.input {
   height: 36px;
-  border-radius: $borderRadius;
+  @include borderRadius;
   input {
     border: 1px solid $inputBorderColor;
+    padding: 5px;
+    border-radius: $borderRadius;
     &:focus {
       border-color: $inputBorderFocusColor !important;
     }
@@ -109,4 +111,10 @@ body ::-webkit-scrollbar {
 .ui.card > .content > .header,
 .ui.cards > .card > .content > .header {
   color: $fontColor2;
+}
+
+.ui.card > .content,
+.ui.cards > .card > .content {
+  padding: 10px;
+  @include borderRadius;
 }

@@ -29,7 +29,11 @@ $iconColor: $grey30;
 $fontColor1: $grey60;
 $fontColor2: $grey50; // used for most fonts
 
-$borderRadius: 3px !important;
+$borderRadius: 3px;
+
+@mixin borderRadius {
+  border-radius: $borderRadius !important;
+}
 
 $xs: 576px;
 $sm: 768px;
