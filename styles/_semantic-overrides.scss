@@ -1,15 +1,11 @@
-body {
-  font-family: 'Dosis', sans-serif;
-  overflow: hidden;
-}
 body ::-webkit-scrollbar {
   width: 6px;
 }
 .ui.button {
-  font-family: 'Dosis', sans-serif !important;
+  @include FontFamily;
   font-size: 15px;
-  line-height: 36px;
-  padding: 0;
+  min-height: 36px;
+  padding: 0 25px;
   font-weight: 500;
   text-transform: inherit;
 }
@@ -84,7 +80,7 @@ body ::-webkit-scrollbar {
     padding: 5px;
     border-radius: $borderRadius;
     &:focus {
-      border-color: $inputBorderFocusColor !important;
+      border-color: $inputBorderFocusColor;
     }
   }
   i.material-icons {
@@ -102,6 +98,14 @@ body ::-webkit-scrollbar {
   }
 }
 
+.ui.form textarea {
+  @include borderRadius;
+}
+
+.ui.card {
+  @include borderRadius;
+}
+
 .ui.card,
 .ui.cards > .card {
   box-shadow: none;
@@ -117,4 +121,23 @@ body ::-webkit-scrollbar {
 .ui.cards > .card > .content {
   padding: $padding;
   @include borderRadius;
+}
+
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
+  @include FontFamily;
+}
+
+.ui.card > .content,
+.ui.cards > .card > .content {
+  @include FontFamily;
+}
+
+.ui.popup {
+  @include borderRadius;
+}
+
+.ui.accordion .accordion .title,
+.ui.accordion .title {
+  @include FontFamily;
 }

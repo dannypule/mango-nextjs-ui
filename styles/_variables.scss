@@ -16,6 +16,8 @@ $grey50: #9198a2; // font lighter lighter
 $grey60: #596072; // font lighter
 $grey70: #4b5165; // font
 
+$red5: #fad6d8; // red background
+$red18: #e65556; // item on $red5
 $red20: #ff555f; // when you need red - in a chart or something
 $red21: #fe4f4c; //
 $red50: #d93900; // airbnb red
@@ -36,6 +38,9 @@ $padding: 15px;
 
 @mixin borderRadius {
   border-radius: $borderRadius !important;
+}
+@mixin FontFamily {
+  font-family: 'Dosis', sans-serif !important;
 }
 
 $xs: 576px;

@@ -1,3 +1,7 @@
+body {
+  @include FontFamily;
+  overflow: hidden;
+}
 .material-icons {
   color: $grey30;
 }
@@ -5,8 +9,19 @@
 form {
   .field {
     padding: 0 0 $padding;
-    .input {
+    .ui.input {
       width: 100%;
+      &.error {
+        input {
+          border-color: $red5 !important;
+        }
+        .ui.label {
+          background-color: $red5;
+          i {
+            color: $red18;
+          }
+        }
+      }
     }
     .field-errors {
       color: $red21;
@@ -14,4 +29,12 @@ form {
       margin: 2px 1px 0;
     }
   }
+}
+
+.toastify > div {
+  padding-left: 13px;
+  @include FontFamily;
+  font-size: 16px;
+  border-radius: 3px;
+  font-weight: 500;
 }

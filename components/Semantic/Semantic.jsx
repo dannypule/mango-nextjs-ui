@@ -16,7 +16,7 @@ import {
   Modal,
   Header,
 } from 'semantic-ui-react'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
 
@@ -118,7 +118,6 @@ const Semantic = () => (
       <Button onClick={() => toast('Wow so easy !')} primary>
         Show toast
       </Button>
-      <ToastContainer />
     </div>
     <br />
     <br />
