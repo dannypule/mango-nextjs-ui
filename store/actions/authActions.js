@@ -1,4 +1,4 @@
-import { post } from '../../services/api.service'
+import { post } from '../../services/apiService'
 
 export const login = ({ username, password, actions, toast }) => dispatch => {
   return post('/auth/login', {

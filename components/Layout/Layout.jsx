@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
+import { connect } from 'react-redux'
+import Proptypes from 'prop-types'
 import TopBar from './TopBar'
 import SideMenu from './SideMenu'
 import { ToastContainer } from 'react-toastify'
 
 class Layout extends Component {
+  static propTypes = {
+    loggedIn: Proptypes.bool,
+  }
+
   render() {
     // layout needs to be handled differently when next.js 6 comes out
-    const { children, title = 'This is the default title' } = this.props
+    const {
+      children,
+      title = 'Yatta Health Studio Management',
+      loggedIn,
+    } = this.props
     return (
       <div className="Layout">
         <Head>
@@ -19,14 +29,21 @@ class Layout extends Component {
           />
         </Head>
         <TopBar />
-        <SideMenu />
+        <div className="layout-main">
+          {loggedIn && <SideMenu />}
+          <div className="layout-body">{children}</div>
+        </div>
         <ToastContainer autoClose={3000} hideProgressBar className="toastify" />
-
-        <div className="layout-body">{children}</div>
 
         {/* <footer>I`m here to stay</footer> */}
       </div>
     )
   }
 }
-export default Layout
+
+export default connect(
+  state => ({
+    loggedIn: state.auth.loggedIn,
+  }),
+  null,
+)(Layout)

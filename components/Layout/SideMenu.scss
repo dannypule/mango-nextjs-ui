@@ -1,9 +1,7 @@
 .SideMenu {
-  position: fixed;
-  height: calc(100vh - 60px);
   width: 148px;
-  top: 60px;
   border-right: 1px solid $borderColor;
+  background-color: #ffffff;
   @media (max-width: $sm) {
     display: none;
   }

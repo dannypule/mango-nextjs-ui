@@ -1,3 +1,4 @@
+// https://daveceddia.com/multiple-environments-with-react/
 const getApiRootUsingHostname = () => {
   if (typeof window === 'undefined') return null
 
@@ -14,8 +15,6 @@ const getApiRootUsingHostname = () => {
   }
   return process.env.REACT_APP_BACKEND_HOST || 'http://localhost:5566'
 }
-
-// const dev = process.env.NODE_ENV !== 'production'
 
 const backendHost = getApiRootUsingHostname() || 'http://localhost:5566'
 

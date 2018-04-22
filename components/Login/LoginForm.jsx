@@ -13,6 +13,84 @@ class LoginForm extends React.Component {
     login: Proptypes.func,
   }
 
+  initialValues = {
+    email: 'superadmin',
+    password: 'supersecure',
+  }
+
+  onSubmit = (values, actions) => {
+    const { email, password } = values
+    const { login } = this.props
+    login({ username: email, password, actions, toast })
+  }
+
+  validationSchema = yup.object().shape({
+    email: yup
+      .string()
+      // .email('A valid email is required.')
+      .required('An email is required.'),
+    password: yup.string().required('A password is required.'),
+  })
+
+  renderForm = ({
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    isSubmitting,
+  }) => (
+    <form
+      onSubmit={e => {
+        e.preventDefault()
+        handleSubmit(e)
+      }}
+    >
+      <div className="field">
+        <Input
+          className={errors.email && touched.email && 'error'}
+          type="text"
+          name="email"
+          label={
+            <div className="ui label label">
+              <i className="material-icons">email</i>
+            </div>
+          }
+          placeholder="Email"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.email}
+        />
+        {errors.email &&
+          touched.email && <div className="field-errors">{errors.email}</div>}
+      </div>
+      <div className="field">
+        <Input
+          className={errors.password && touched.password && 'error'}
+          type="password"
+          name="password"
+          label={
+            <div className="ui label label">
+              <i className="material-icons">vpn_key</i>
+            </div>
+          }
+          placeholder="Password"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.password}
+        />
+        {errors.password &&
+          touched.password && (
+            <div className="field-errors">{errors.password}</div>
+          )}
+      </div>
+      <Button type="submit" primary disabled={isSubmitting}>
+        Login
+      </Button>
+    </form>
+  )
+
   render() {
     return (
       <div className="LoginForm">
@@ -21,79 +99,10 @@ class LoginForm extends React.Component {
             <Card.Header>Login</Card.Header>
             <Card.Description>
               <Formik
-                initialValues={{
-                  email: 'superadmin',
-                  password: 'supersecure',
-                }}
-                onSubmit={(values, actions) => {
-                  const { email, password } = values
-                  const { login } = this.props
-                  login({ username: email, password, actions, toast })
-                }}
-                validationSchema={yup.object().shape({
-                  email: yup
-                    .string()
-                    // .email('A valid email is required.')
-                    .required('An email is required.'),
-                  password: yup.string().required('A password is required.'),
-                })}
-                render={({
-                  values,
-                  errors,
-                  touched,
-                  handleChange,
-                  handleBlur,
-                  handleSubmit,
-                  isSubmitting,
-                }) => (
-                  <form onSubmit={handleSubmit}>
-                    <div className="field">
-                      <Input
-                        className={errors.email && touched.email && 'error'}
-                        type="text"
-                        name="email"
-                        label={
-                          <div className="ui label label">
-                            <i className="material-icons">email</i>
-                          </div>
-                        }
-                        placeholder="Email"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.email}
-                      />
-                      {errors.email &&
-                        touched.email && (
-                          <div className="field-errors">{errors.email}</div>
-                        )}
-                    </div>
-                    <div className="field">
-                      <Input
-                        className={
-                          errors.password && touched.password && 'error'
-                        }
-                        type="password"
-                        name="password"
-                        label={
-                          <div className="ui label label">
-                            <i className="material-icons">vpn_key</i>
-                          </div>
-                        }
-                        placeholder="Password"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.password}
-                      />
-                      {errors.password &&
-                        touched.password && (
-                          <div className="field-errors">{errors.password}</div>
-                        )}
-                    </div>
-                    <Button type="submit" primary disabled={isSubmitting}>
-                      Login
-                    </Button>
-                  </form>
-                )}
+                initialValues={this.initialValues}
+                onSubmit={this.onSubmit}
+                validationSchema={this.validationSchema}
+                render={this.renderForm}
               />
             </Card.Description>
           </Card.Content>
