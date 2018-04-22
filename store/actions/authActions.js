@@ -1,15 +1,10 @@
-import axios from 'axios'
-import { API_ROOT } from '../../api-config'
+import { post } from '../../services/api.service'
 
 export const login = ({ username, password, actions, toast }) => dispatch => {
-  return axios
-    .post(`${API_ROOT}/auth/login`, {
-      username,
-      password,
-    })
-    .then(res => {
-      return res.data
-    })
+  return post('/auth/login', {
+    username,
+    password,
+  })
     .then(res => {
       actions.setSubmitting(false)
       dispatch({ type: 'LOGIN_SUCCESS', scatterData: res.data })
