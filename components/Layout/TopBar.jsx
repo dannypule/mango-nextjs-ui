@@ -1,81 +1,98 @@
 import React, { Component } from 'react'
-import { Dropdown, Image, Modal } from 'semantic-ui-react'
-// import Link from 'next/link'
-
-// import { connect } from 'react-redux'
-// import Proptypes from 'prop-types'
-// import {
-//   increaseNumber,
-//   decreaseNumber,
-// } from '../../store/actions/numberActions'
+import { Dropdown, Image } from 'semantic-ui-react'
+import Proptypes from 'prop-types'
+import Link from 'next/link'
 
 class TopBar extends Component {
-  // static propTypes = {
-  //   increaseNumber: Proptypes.func,
-  //   decreaseNumber: Proptypes.func,
-  //   number: Proptypes.number,
-  // }
+  static propTypes = {
+    loggedIn: Proptypes.bool,
+    logout: Proptypes.func,
+  }
 
-  // modal = () => (
-  //   <Modal trigger={}>
-  //     <Modal.Header>Select a Photo</Modal.Header>
-  //     <Modal.Content image>login</Modal.Content>
-  //   </Modal>
-  // )
+  logout = () => {
+    const { logout } = this.props
+    logout()
+  }
+
+  renderDefault = () => {
+    const links = [
+      {
+        href: '/login',
+        text: 'Login',
+      },
+      {
+        href: '/register',
+        text: 'Register',
+      },
+      {
+        href: '/contact',
+        text: 'Contact',
+      },
+      {
+        href: '/about',
+        text: 'About',
+      },
+    ]
+    return (
+      <div className="topbar-default">
+        <div className="links">
+          {links.map(link => (
+            <Link key={link.href} href={link.href}>
+              <span className="link">{link.text}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  renderLoggedIn = () => {
+    return (
+      <div className="topbar-logged-in">
+        <span className="gym-name">Yatta Health Club</span>
+        <span className="user-dropdown">
+          <Image
+            src="https://api.adorable.io/avatars/45/abott@adorable.pngCopy"
+            avatar
+          />
+          <Dropdown inline text="Fenton Bentley">
+            <Dropdown.Menu>
+              <Dropdown.Item>
+                <Link href="/contact">
+                  <span>Contact</span>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/about">
+                  <span>About</span>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/profile">
+                  <span>Profile</span>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <button onClick={this.logout}>Logout</button>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </span>
+        <div className="burger-menu">
+          <i className="material-icons">menu</i>
+        </div>
+      </div>
+    )
+  }
 
   render() {
+    const { loggedIn } = this.props
     return (
       <header className="TopBar">
-        <div>
-          {/* <Link href="/">
-            <span>Home</span>
-          </Link>{' '}
-          |
-          <Link href="/about">
-            <span>About</span>
-          </Link>{' '}
-          |
-          <Link href="/contact">
-            <span>Contact</span>
-          </Link> */}
-          <span className="gym-name">Yatta Health Club</span>
-          <span className="user-dropdown">
-            <Image
-              src="https://api.adorable.io/avatars/45/abott@adorable.pngCopy"
-              avatar
-            />
-            <Dropdown inline text="Fenton Barley">
-              <Dropdown.Menu>
-                <Dropdown.Item>
-                  <Modal trigger={<span>Login</span>}>
-                    <Modal.Content>Login</Modal.Content>
-                  </Modal>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Modal trigger={<span>Register</span>}>
-                    <Modal.Content>Register</Modal.Content>
-                  </Modal>
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </span>
-          <div className="burger-menu">
-            <i className="material-icons">menu</i>
-          </div>
-        </div>
+        {!loggedIn ? this.renderDefault() : this.renderLoggedIn()}
       </header>
     )
   }
 }
-
-// export default connect(
-//   state => ({
-//     number: state.num.number,
-//   }),
-//   {
-//     increaseNumber,
-//     decreaseNumber,
-//   },
-// )(TopBar)
 
 export default TopBar

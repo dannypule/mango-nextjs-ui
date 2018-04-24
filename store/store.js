@@ -4,10 +4,12 @@ import thunkMiddleware from 'redux-thunk'
 
 import chartReducer from './reducers/chartReducer'
 import numberReducer from './reducers/numberReducer'
+import authReducer from './reducers/authReducer'
 
 const rootReducer = combineReducers({
   chart: chartReducer,
   num: numberReducer,
+  auth: authReducer,
 })
 
 const store = initialState => {

@@ -1,12 +1,13 @@
-body {
-  font-family: 'Dosis', sans-serif;
-  overflow: hidden;
-}
 body ::-webkit-scrollbar {
   width: 6px;
 }
-button {
-  font-family: 'Dosis', sans-serif !important;
+.ui.button {
+  @include FontFamily;
+  font-size: 15px;
+  min-height: 36px;
+  padding: 0 25px;
+  font-weight: 500;
+  text-transform: inherit;
 }
 
 // primary button
@@ -56,7 +57,7 @@ button {
 }
 
 .ui.dropdown .menu {
-  border-radius: $borderRadius;
+  @include borderRadius;
   box-shadow: none !important;
 }
 
@@ -64,9 +65,101 @@ button {
   font-size: 14px;
   font-weight: 500;
   color: $fontColor2;
+  padding: 0 !important;
+  &:hover {
+    color: $fontColor2 !important;
+  }
+  button {
+    border: none;
+    padding: 0;
+    line-height: inherit;
+    @include FontFamily;
+    color: $fontColor2;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  > span,
+  > button {
+    padding: 11px 16px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+  }
 }
 
 .ui.dropdown .menu > .item:hover {
   background-color: $grey4;
   color: $fontColor1;
+}
+
+.ui.input {
+  height: 36px;
+  @include borderRadius;
+  input {
+    border: 1px solid $inputBorderColor;
+    padding: 5px;
+    border-radius: $borderRadius;
+    &:focus {
+      border-color: $inputBorderFocusColor;
+    }
+  }
+  i.material-icons {
+    font-size: 21px;
+  }
+  &.labeled {
+    .label {
+      background-color: $inputBorderColor;
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.ui.form textarea {
+  @include borderRadius;
+}
+
+.ui.card {
+  @include borderRadius;
+}
+
+.ui.card,
+.ui.cards > .card {
+  box-shadow: none;
+  border: 1px solid $borderColor;
+}
+
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
+  color: $fontColor3;
+}
+
+.ui.card > .content,
+.ui.cards > .card > .content {
+  padding: $padding;
+  @include borderRadius;
+}
+
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
+  @include FontFamily;
+}
+
+.ui.card > .content,
+.ui.cards > .card > .content {
+  @include FontFamily;
+}
+
+.ui.popup {
+  @include borderRadius;
+}
+
+.ui.accordion .accordion .title,
+.ui.accordion .title {
+  @include FontFamily;
 }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-// import Link from 'next/link'
+// import Link from 'next/link' // use to link to new view
 import { Accordion, Icon } from 'semantic-ui-react'
-
-// import { connect } from 'react-redux'
-// import Proptypes from 'prop-types'
-// import {
+// import { connect } from 'react-redux' // to be used when connecting to store
+// import Proptypes from 'prop-types' // to be used when connecting to store
+// import { // to be used when connecting to store
 //   increaseNumber,
 //   decreaseNumber,
 // } from '../../store/actions/numberActions'
@@ -111,36 +110,6 @@ class SideMenu extends Component {
             </div>
           ))}
         </Accordion>
-        {/* <List>
-            <List.Item>
-              Overview
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-            <List.Item>
-              Members
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-            <List.Item>
-              Billing
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-            <List.Item>
-              Marketing
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-            <List.Item>
-              Website
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-            <List.Item>
-              Sales
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-            <List.Item>
-              Gym
-              <i className="material-icons">arrow_drop_down</i>
-            </List.Item>
-          </List> */}
       </div>
     )
   }
@@ -154,7 +123,7 @@ class SideMenu extends Component {
   }
 }
 
-// export default connect(
+// export default connect( // to be used when connecting to store
 //   state => ({
 //     number: state.num.number,
 //   }),
