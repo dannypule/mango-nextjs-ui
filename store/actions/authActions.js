@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import { post } from '../../services/apiService'
 
 export const login = ({ username, password, actions, toast }) => dispatch => {
@@ -7,7 +8,8 @@ export const login = ({ username, password, actions, toast }) => dispatch => {
   })
     .then(res => {
       actions.setSubmitting(false)
-      dispatch({ type: 'LOGIN_SUCCESS', scatterData: res.data })
+      dispatch({ type: 'LOGIN_SUCCESS' })
+      Router.push('/')
       console.log(res)
     })
     .catch(err => {
@@ -15,4 +17,9 @@ export const login = ({ username, password, actions, toast }) => dispatch => {
       actions.setSubmitting(false)
       console.log(err)
     })
+}
+
+export const logout = () => dispatch => {
+  dispatch({ type: 'LOGOUT' })
+  Router.push('/login')
 }

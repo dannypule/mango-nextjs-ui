@@ -1,12 +1,12 @@
 .SideMenu {
-  width: 148px;
+  width: 170px;
   border-right: 1px solid $borderColor;
   background-color: #ffffff;
   @media (max-width: $sm) {
     display: none;
   }
   .menu-items {
-    padding: 50px 25px 0;
+    padding: 50px 17px 0;
     .list {
       .item {
         padding: 13px 0;
@@ -23,12 +23,14 @@
         .title {
           padding-right: 18px;
           position: relative;
-          color: $fontColor2;
-          font-size: 18px;
+          color: $fontColor3;
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
           &:hover:not(.active) {
-            color: $fontColor1;
+            color: $fontColor2;
             i.dropdown {
-              color: $fontColor1;
+              color: $fontColor2;
             }
           }
           &.active {

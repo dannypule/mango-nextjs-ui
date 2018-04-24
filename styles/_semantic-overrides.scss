@@ -65,6 +65,28 @@ body ::-webkit-scrollbar {
   font-size: 14px;
   font-weight: 500;
   color: $fontColor2;
+  padding: 0 !important;
+  &:hover {
+    color: $fontColor2 !important;
+  }
+  button {
+    border: none;
+    padding: 0;
+    line-height: inherit;
+    @include FontFamily;
+    color: $fontColor2;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  > span,
+  > button {
+    padding: 11px 16px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+  }
 }
 
 .ui.dropdown .menu > .item:hover {
@@ -114,7 +136,7 @@ body ::-webkit-scrollbar {
 
 .ui.card > .content > .header,
 .ui.cards > .card > .content > .header {
-  color: $fontColor2;
+  color: $fontColor3;
 }
 
 .ui.card > .content,

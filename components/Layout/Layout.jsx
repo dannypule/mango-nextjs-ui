@@ -2,13 +2,16 @@ import React, { Component } from 'react'
 import Head from 'next/head'
 import { connect } from 'react-redux'
 import Proptypes from 'prop-types'
+import { ToastContainer } from 'react-toastify'
+
 import TopBar from './TopBar'
 import SideMenu from './SideMenu'
-import { ToastContainer } from 'react-toastify'
+import { logout } from '../../store/actions/authActions'
 
 class Layout extends Component {
   static propTypes = {
     loggedIn: Proptypes.bool,
+    logout: Proptypes.func,
   }
 
   render() {
@@ -17,6 +20,7 @@ class Layout extends Component {
       children,
       title = 'Yatta Health Studio Management',
       loggedIn,
+      logout,
     } = this.props
     return (
       <div className="Layout">
@@ -28,7 +32,7 @@ class Layout extends Component {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <TopBar />
+        <TopBar loggedIn={loggedIn} logout={logout} />
         <div className="layout-main">
           {loggedIn && <SideMenu />}
           <div className="layout-body">{children}</div>
@@ -45,5 +49,7 @@ export default connect(
   state => ({
     loggedIn: state.auth.loggedIn,
   }),
-  null,
+  {
+    logout,
+  },
 )(Layout)

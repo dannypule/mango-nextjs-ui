@@ -7,6 +7,7 @@ import yup from 'yup'
 import { toast } from 'react-toastify'
 // import Router from 'next/router'
 import { login } from '../../store/actions/authActions'
+import SpinnerForButton from '../common/SpinnerForButton'
 
 class LoginForm extends React.Component {
   static propTypes = {
@@ -19,6 +20,7 @@ class LoginForm extends React.Component {
   }
 
   onSubmit = (values, actions) => {
+    // actions.validateForm()
     const { email, password } = values
     const { login } = this.props
     login({ username: email, password, actions, toast })
@@ -86,7 +88,7 @@ class LoginForm extends React.Component {
           )}
       </div>
       <Button type="submit" primary disabled={isSubmitting}>
-        Login
+        {isSubmitting ? <SpinnerForButton /> : 'Login'}
       </Button>
     </form>
   )
