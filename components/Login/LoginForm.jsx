@@ -15,7 +15,7 @@ class LoginForm extends React.Component {
   }
 
   initialValues = {
-    email: 'superadmin',
+    email: 'Super.Admin@fake-email.infoz',
     password: 'supersecure',
   }
 
@@ -23,13 +23,13 @@ class LoginForm extends React.Component {
     // actions.validateForm()
     const { email, password } = values
     const { login } = this.props
-    login({ username: email, password, actions, toast })
+    login({ email, password, actions, toast })
   }
 
   validationSchema = yup.object().shape({
     email: yup
       .string()
-      // .email('A valid email is required.')
+      .email('A valid email is required.')
       .required('An email is required.'),
     password: yup.string().required('A password is required.'),
   })
@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
       <div className="field">
         <Input
           className={errors.email && touched.email && 'error'}
-          type="text"
+          type="email"
           name="email"
           label={
             <div className="ui label label">

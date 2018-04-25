@@ -6,30 +6,36 @@ import Proptypes from 'prop-types'
 import yup from 'yup'
 import { toast } from 'react-toastify'
 // import Router from 'next/router'
-import { login } from '../../store/actions/authActions'
+import { register } from '../../store/actions/authActions'
 import SpinnerForButton from '../common/SpinnerForButton'
 
 class RegistrationForm extends React.Component {
   static propTypes = {
-    login: Proptypes.func,
+    register: Proptypes.func,
   }
 
   initialValues = {
-    email: 'superadmin',
-    password: 'supersecure',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
   }
 
   onSubmit = (values, actions) => {
     // actions.validateForm()
-    const { email, password } = values
-    const { login } = this.props
-    login({ username: email, password, actions, toast })
+    const { firstName, lastName, email, phone, password } = values
+    const { register } = this.props
+    register({ firstName, lastName, email, phone, password, actions, toast })
   }
 
   validationSchema = yup.object().shape({
+    firstName: yup.string().required('A first name is required.'),
+    lastName: yup.string().required('A last name is required.'),
+    phone: yup.string().required('A phone number is required.'), // todo validate phone number - frontend and backend
     email: yup
       .string()
-      // .email('A valid email is required.')
+      .email('A valid email is required.')
       .required('An email is required.'),
     password: yup.string().required('A password is required.'),
   })
@@ -51,14 +57,56 @@ class RegistrationForm extends React.Component {
     >
       <div className="field">
         <Input
-          className={errors.email && touched.email && 'error'}
+          className={errors.firstName && touched.firstName && 'error'}
           type="text"
+          name="firstName"
+          label="First Name"
+          placeholder="First Name"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.firstName}
+        />
+        {errors.firstName &&
+          touched.firstName && (
+            <div className="field-errors">{errors.firstName}</div>
+          )}
+      </div>
+      <div className="field">
+        <Input
+          className={errors.lastName && touched.lastName && 'error'}
+          type="text"
+          name="lastName"
+          label="Last Name"
+          placeholder="Last Name"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.lastName}
+        />
+        {errors.lastName &&
+          touched.lastName && (
+            <div className="field-errors">{errors.lastName}</div>
+          )}
+      </div>
+      <div className="field">
+        <Input
+          className={errors.phone && touched.phone && 'error'}
+          type="text"
+          name="phone"
+          label="Phone"
+          placeholder="Phone"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.phone}
+        />
+        {errors.phone &&
+          touched.phone && <div className="field-errors">{errors.phone}</div>}
+      </div>
+      <div className="field">
+        <Input
+          className={errors.email && touched.email && 'error'}
+          type="email"
           name="email"
-          label={
-            <div className="ui label label">
-              <i className="material-icons">email</i>
-            </div>
-          }
+          label="Email"
           placeholder="Email"
           onChange={handleChange}
           onBlur={handleBlur}
@@ -72,11 +120,7 @@ class RegistrationForm extends React.Component {
           className={errors.password && touched.password && 'error'}
           type="password"
           name="password"
-          label={
-            <div className="ui label label">
-              <i className="material-icons">vpn_key</i>
-            </div>
-          }
+          label="Password"
           placeholder="Password"
           onChange={handleChange}
           onBlur={handleBlur}
@@ -88,7 +132,7 @@ class RegistrationForm extends React.Component {
           )}
       </div>
       <Button type="submit" primary disabled={isSubmitting}>
-        {isSubmitting ? <SpinnerForButton /> : 'Login'}
+        {isSubmitting ? <SpinnerForButton /> : 'Register'}
       </Button>
     </form>
   )
@@ -98,7 +142,7 @@ class RegistrationForm extends React.Component {
       <div className="RegistrationForm">
         <Card>
           <Card.Content>
-            <Card.Header>Login</Card.Header>
+            <Card.Header>Register</Card.Header>
             <Card.Description>
               <Formik
                 initialValues={this.initialValues}
@@ -119,6 +163,6 @@ export default connect(
     scatterData: state.chart.scatterData,
   }),
   {
-    login,
+    register,
   },
 )(RegistrationForm)
