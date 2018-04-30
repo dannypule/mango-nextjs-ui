@@ -42,7 +42,9 @@ $padding: 15px;
   border-radius: $borderRadius !important;
 }
 @mixin FontFamily {
-  font-family: 'Dosis', sans-serif !important;
+  // font-family: 'Exo 2', sans-serif !important;
+  // font-family: 'Exo', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 $xs: 576px;

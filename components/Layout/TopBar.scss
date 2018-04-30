@@ -18,14 +18,15 @@
     justify-content: flex-end;
 
     .links {
-      font-size: 15px;
-      font-weight: 500;
-      color: $fontColor2;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $fontColor3;
       .link {
         padding: $padding;
         cursor: pointer;
         &:hover {
-          color: $fontColor1;
+          color: $fontColor2;
         }
       }
     }
@@ -55,8 +56,8 @@
           margin: 0 22px 0 6px;
           padding: 15px 0;
           font-size: 15px;
-          font-weight: 500;
-          color: $fontColor2;
+          font-weight: 700;
+          color: $fontColor3;
         }
         > i.icon {
           color: $iconColor;

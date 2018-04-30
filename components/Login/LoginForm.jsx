@@ -1,13 +1,14 @@
 import React from 'react'
 import { Formik } from 'formik'
-import { Input, Card, Button } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import Proptypes from 'prop-types'
 import yup from 'yup'
 import { toast } from 'react-toastify'
-// import Router from 'next/router'
+
 import { login } from '../../store/actions/authActions'
-import SpinnerForButton from '../common/SpinnerForButton'
+import Input from '../FormFields/Input'
+import Button from '../FormFields/Button'
 
 class LoginForm extends React.Component {
   static propTypes = {
@@ -20,7 +21,6 @@ class LoginForm extends React.Component {
   }
 
   onSubmit = (values, actions) => {
-    // actions.validateForm()
     const { email, password } = values
     const { login } = this.props
     login({ email, password, actions, toast })
@@ -49,47 +49,30 @@ class LoginForm extends React.Component {
         handleSubmit(e)
       }}
     >
-      <div className="field">
-        <Input
-          className={errors.email && touched.email && 'error'}
-          type="email"
-          name="email"
-          label={
-            <div className="ui label label">
-              <i className="material-icons">email</i>
-            </div>
-          }
-          placeholder="Email"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.email}
-        />
-        {errors.email &&
-          touched.email && <div className="field-errors">{errors.email}</div>}
-      </div>
-      <div className="field">
-        <Input
-          className={errors.password && touched.password && 'error'}
-          type="password"
-          name="password"
-          label={
-            <div className="ui label label">
-              <i className="material-icons">vpn_key</i>
-            </div>
-          }
-          placeholder="Password"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.password}
-        />
-        {errors.password &&
-          touched.password && (
-            <div className="field-errors">{errors.password}</div>
-          )}
-      </div>
-      <Button type="submit" primary disabled={isSubmitting}>
-        {isSubmitting ? <SpinnerForButton /> : 'Login'}
-      </Button>
+      <Input
+        name="email"
+        type="email"
+        placeholder="Email"
+        label="Email"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        values={values}
+        errors={errors}
+        touched={touched}
+      />
+
+      <Input
+        name="password"
+        type="password"
+        placeholder="Password"
+        label="Password"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        values={values}
+        errors={errors}
+        touched={touched}
+      />
+      <Button text="Login" type="submit" primary isSubmitting={isSubmitting} />
     </form>
   )
 

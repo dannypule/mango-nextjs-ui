@@ -23,7 +23,6 @@ export const register = ({
   firstName,
   lastName,
   email,
-  phone,
   password,
   actions,
   toast,
@@ -31,7 +30,6 @@ export const register = ({
   return post('/auth/register', {
     firstName,
     lastName,
-    phone,
     email,
     password,
   })
@@ -42,7 +40,7 @@ export const register = ({
       console.log(res)
     })
     .catch(err => {
-      toast.error('Failed to login. Please try again.')
+      toast.error(err.error)
       actions.setSubmitting(false)
       console.log(err)
     })
