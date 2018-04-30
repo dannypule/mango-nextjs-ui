@@ -36,7 +36,8 @@ export const register = ({
     .then(res => {
       actions.setSubmitting(false)
       dispatch({ type: 'REGISTER_SUCCESS' })
-      Router.push('/')
+      Router.push('/login')
+      toast.success('Successfully created account. Please login to continue.')
       console.log(res)
     })
     .catch(err => {
