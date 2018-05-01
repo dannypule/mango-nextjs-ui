@@ -22,9 +22,9 @@ const Component = ({
 
 Component.propTypes = {
   text: Proptypes.string.isRequired,
-  disabled: Proptypes.bool.isRequired,
   type: Proptypes.string.isRequired,
   isSubmitting: Proptypes.bool,
+  disabled: Proptypes.bool,
   primary: Proptypes.bool,
   secondary: Proptypes.bool,
 }

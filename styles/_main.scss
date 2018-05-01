@@ -11,8 +11,12 @@ body {
 
 .toastify > div {
   padding-left: 13px;
+  padding-right: 11px;
   @include FontFamily;
   font-size: 16px;
   border-radius: 3px;
   font-weight: 500;
+  button {
+    margin-left: 5px;
+  }
 }
