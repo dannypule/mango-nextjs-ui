@@ -32,8 +32,8 @@
     }
   }
   .topbar-logged-in {
-    .gym-name {
-      color: $fontColor1;
+    .left-title {
+      color: $fontColor2;
       font-size: 17px;
       font-weight: 600;
       margin-left: 18px;
@@ -55,9 +55,9 @@
         > .text {
           margin: 0 22px 0 6px;
           padding: 15px 0;
-          font-size: 15px;
           font-weight: 700;
-          color: $fontColor3;
+          color: $fontColor4;
+          font-size: 14px;
         }
         > i.icon {
           color: $iconColor;

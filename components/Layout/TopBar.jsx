@@ -49,7 +49,7 @@ class TopBar extends Component {
   renderLoggedIn = () => {
     return (
       <div className="topbar-logged-in">
-        <span className="gym-name">Yatta Health Club</span>
+        <span className="left-title">Yatta Health Club</span>
         <span className="user-dropdown">
           <Image
             src="https://api.adorable.io/avatars/45/abott@adorable.pngCopy"
