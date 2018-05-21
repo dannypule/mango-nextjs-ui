@@ -10,6 +10,10 @@ body ::-webkit-scrollbar {
   text-transform: inherit;
 }
 
+.ui.button:disabled, .ui.buttons .disabled.button, .ui.disabled.active.button, .ui.disabled.button, .ui.disabled.button:hover {
+  opacity: 1 !important;
+}
+
 // primary button
 .ui.primary.button,
 .ui.primary.buttons .button {
@@ -63,9 +67,6 @@ body ::-webkit-scrollbar {
 }
 
 .ui.dropdown .menu > .item {
-  font-size: 14px;
-  font-weight: 500;
-  color: $fontColor2;
   padding: 0 !important;
   &:hover {
     color: $fontColor2 !important;
@@ -75,9 +76,6 @@ body ::-webkit-scrollbar {
     padding: 0;
     line-height: inherit;
     @include FontFamily;
-    color: $fontColor2;
-    font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
     background-color: transparent;
   }
@@ -87,42 +85,15 @@ body ::-webkit-scrollbar {
     width: 100%;
     display: inline-block;
     text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: $fontColor2;
   }
 }
 
 .ui.dropdown .menu > .item:hover {
   background-color: $grey4;
   color: $fontColor1;
-}
-
-.ui.input {
-  height: 36px;
-  @include borderRadius;
-  input {
-    border: 1px solid $inputBorderColor;
-    padding: 5px;
-    border-radius: $borderRadius;
-    &:focus {
-      border-color: $inputBorderFocusColor;
-    }
-  }
-  i.material-icons {
-    font-size: 21px;
-  }
-  &.labeled {
-    .label {
-      background-color: $inputBorderColor;
-      padding-top: 0;
-      padding-bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
-
-.ui.form textarea {
-  @include borderRadius;
 }
 
 .ui.card {

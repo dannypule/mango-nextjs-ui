@@ -38,8 +38,6 @@ class Layout extends Component {
           <div className="layout-body">{children}</div>
         </div>
         <ToastContainer autoClose={3000} hideProgressBar className="toastify" />
-
-        {/* <footer>I`m here to stay</footer> */}
       </div>
     )
   }

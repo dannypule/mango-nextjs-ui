@@ -3,6 +3,8 @@ $blue30: #afc1f1; // $inputBorderFocusColor
 $blue40: #4d7cfe; // blue primary - buttons, blue font
 $blue60: #2d69e9; //
 
+$black60: #36383c;
+
 $orange20: #eab86e; // highlight background for orange font
 $orange40: #ebb86e; // orange font
 $orange60: #ffab2e; // orange primary
@@ -34,6 +36,7 @@ $iconColor: $grey30;
 $fontColor1: $grey60;
 $fontColor2: $grey50; // used for most fonts
 $fontColor3: $grey40; // used for larger fonts and/or uppercase fonts
+$fontColor4: $black60; // used for black fonts
 
 $borderRadius: 3px;
 $padding: 15px;
@@ -42,7 +45,9 @@ $padding: 15px;
   border-radius: $borderRadius !important;
 }
 @mixin FontFamily {
-  font-family: 'Dosis', sans-serif !important;
+  // font-family: 'Exo 2', sans-serif !important;
+  // font-family: 'Exo', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 $xs: 576px;

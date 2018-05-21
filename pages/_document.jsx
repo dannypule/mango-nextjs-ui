@@ -13,12 +13,16 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
           />
-          {/* <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css"
-          /> */}
           <link
-            href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700"
+            href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Exo:400,500,600,700"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
             rel="stylesheet"
           />
           <link

@@ -5,28 +5,31 @@ import { connect } from 'react-redux'
 import Proptypes from 'prop-types'
 import yup from 'yup'
 import { toast } from 'react-toastify'
-
-import { login } from '../../store/actions/authActions'
 import Input from '../FormFields/Input'
 import Button from '../FormFields/Button'
+import { register } from '../../store/actions/authActions'
 
-class LoginForm extends React.Component {
+class RegistrationForm extends React.Component {
   static propTypes = {
-    login: Proptypes.func,
+    register: Proptypes.func,
   }
 
   initialValues = {
-    email: 'Super.Admin@fake-email.infoz',
-    password: 'supersecure',
+    firstName: 'bob',
+    lastName: 'bobby',
+    email: 'boby@gmail.com',
+    password: 'admin1',
   }
 
   onSubmit = (values, actions) => {
-    const { email, password } = values
-    const { login } = this.props
-    login({ email, password, actions, toast })
+    const { firstName, lastName, email, password } = values
+    const { register } = this.props
+    register({ firstName, lastName, email, password, actions, toast })
   }
 
   validationSchema = yup.object().shape({
+    firstName: yup.string().required('A first name is required.'),
+    lastName: yup.string().required('A last name is required.'),
     email: yup
       .string()
       .email('A valid email is required.')
@@ -46,9 +49,32 @@ class LoginForm extends React.Component {
     <form
       onSubmit={e => {
         e.preventDefault()
+
         handleSubmit(e)
       }}
     >
+      <Input
+        name="firstName"
+        type="text"
+        placeholder="First Name"
+        label="First Name"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        values={values}
+        errors={errors}
+        touched={touched}
+      />
+      <Input
+        name="lastName"
+        type="text"
+        placeholder="Last Name"
+        label="Last Name"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        values={values}
+        errors={errors}
+        touched={touched}
+      />
       <Input
         name="email"
         type="email"
@@ -60,7 +86,6 @@ class LoginForm extends React.Component {
         errors={errors}
         touched={touched}
       />
-
       <Input
         name="password"
         type="password"
@@ -72,16 +97,21 @@ class LoginForm extends React.Component {
         errors={errors}
         touched={touched}
       />
-      <Button text="Login" type="submit" primary isSubmitting={isSubmitting} />
+      <Button
+        text="Register"
+        type="submit"
+        primary
+        isSubmitting={isSubmitting}
+      />
     </form>
   )
 
   render() {
     return (
-      <div className="LoginForm">
+      <div className="RegistrationForm">
         <Card>
           <Card.Content>
-            <Card.Header>Login</Card.Header>
+            <Card.Header>Register</Card.Header>
             <Card.Description>
               <Formik
                 initialValues={this.initialValues}
@@ -102,6 +132,6 @@ export default connect(
     scatterData: state.chart.scatterData,
   }),
   {
-    login,
+    register,
   },
-)(LoginForm)
+)(RegistrationForm)
